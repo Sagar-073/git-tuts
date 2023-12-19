@@ -1,0 +1,47 @@
+1.working directory
+suppose we have 3 files namely ex,ex1 and index.html
+--here we have to send staging area by single files 
+if i want to send only ex and index.html 
+we use add command to send file in staging area: git add index.html,git add example.txt
+
+2.staging area
+--but here we have send whole or batch of file to local
+here both file goes to local repository
+use commit command to send local repository : git commit -m "here we have to any message"
+
+3.local repository
+-- here also same we have send whole or batch of file to remote
+we have go github create a repository then they give: git remote add origin https://github.com/Sagar-073/git-tuts.git
+we use git branch then we found in which we have. ->git branch,then get master  
+use push command to go remote repository:git push -u origin master
+
+4.remote repository
+--refresh the existing repository page we get files which we have selected.
+
+5.branches:our code present in main/master branch we can deploy or redeploy(if any update is there)
+ex:This real-time example demonstrates how branches in Git allow multiple developers to work on different tasks simultaneously without interfering with each other. Each branch represents a separate line of development, and they can be merged back into the "master" branch when the work is complete and tested.
+after work done then go to master branch with PR(pull request) then deploy
+-- checkout:jumping btw the branches
+-- -b:is to create branch 
+ex: git checkout -b "copy1". cmd:git branch, now branch changed to copy1 from master.
+after check the status: git status, that will give untracked files that is example2.txt
+
+now we can go staging area by:git add example2.txt
+then commit: git commit -m "commiting example2"
+then use git push we get:git push --set-upstream origin copy1,after pasting this automatically create folder we see other copy1 branch after refresh
+
+If i want to merge the copy1 branch file to master branch use: in screen visible as campare & pull request press that, then write any comment then press creat pull request, then press merge pull request and again it says confirm merge.
+
+…or create a new repository on the command line
+echo "# git-tuts" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Sagar-073/git-tuts.git
+git push -u origin main
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/Sagar-073/git-tuts.git
+git branch -M main
+git push -u origin main
